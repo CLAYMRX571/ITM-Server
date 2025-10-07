@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITM SERVER</title>
+    <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="sidebar">
+        <h1>@HOST</h1>
+        <ul>
+            <li><i>👤</i> <span>Регистрация</span></li>
+            <li><i>🔓</i> <span>Вход в кабинет</span></li>
+            <li><i>🌐</i> <span>Заказать домен</span></li>
+            <li><i>💾</i> <span>Заказать хостинг</span></li>
+            <li><i>🖥️</i> <span>Заказать сервер</span></li>
+            <li><i>🔒</i> <span>Заказать SSL</span></li>
+            <li><i>📝</i> <span>Написать заявление</span></li>
+            <li><i>❓</i> <span>База знаний</span></li>
+            <li><i>📢</i> <span>Объявления</span></li>
+            <li><i>✉️</i> <span>Связь с нами</span></li>
+            <li><i>🔙</i> <span>Вернуться на ahost.uz</span></li>
+        </ul>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="back">←</div>
+        <div class="date">ОКТЯБРЬ 7, 2025</div>
+        <div class="icons">
+            <i>A</i>
+            <i>🛒</i>
+            <div class="green-btn">→</div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal">
+        <h2>ВХОД</h2>
+
+        <div class="login-options">
+            <div class="login-option">
+                <img src="https://via.placeholder.com/30/FF5722/FFFFFF?text=📧" alt="Email">
+                <span>E-mail</span>
+            </div>
+            <div class="login-option">
+                <img src="https://via.placeholder.com/30/4CAF50/FFFFFF?text=👤" alt="Face ID">
+                <span>FACE ID</span>
+            </div>
+            <div class="login-option">
+                <img src="https://via.placeholder.com/30/9C27B0/FFFFFF?text=ID" alt="One ID">
+                <span>ONE ID</span>
+            </div>
+            <div class="login-option">
+                <img src="https://via.placeholder.com/30/2196F3/FFFFFF?text=IMZO" alt="Imzo">
+                <span>imzo</span>
+            </div>
+        </div>
+
+        <form class="login-form">
+            <input type="email" placeholder="claymrx571@gmail.com" value="claymrx571@gmail.com">
+            <input type="password" placeholder="Пароль" value="********">
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox"> Запомнить меня
+                </label>
+                <a href="#">Забыли пароль?</a>
+            </div>
+
+            <button type="button" class="login-btn">→ Вход</button>
+        </form>
+
+        <div class="info-box">
+            Вход в кабинет по e-mail адресу указанному при регистрации и паролю.<br><br>
+            Если вы забыли пароль, вы можете воспользоваться функцией восстановления пароля, нажав на ссылку "Забыли пароль".
+        </div>
+    </div>
+
+<script src="{% static 'assets/js/scripts.js' %}"></script> 
+</body>
+</html>

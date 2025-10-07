@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Payment
 
-# Create your views here.
+def Paymentviews(request):
+    payment = Payment.objects.all()  
+
+    context = {
+        'payment': payment,
+    }
+
+    return render(request, 'payment.html', context)
+
+def lan_switch_payment(request, lan):
+    return redirect(f'/{lan}/payment/')
