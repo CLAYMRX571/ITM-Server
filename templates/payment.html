@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITM</title>
+    <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'index' %}" class="logo-link">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="" class="logo-img">
+            <span class="logo-text">ITM SERVER</span>
+        </a>
+
+        <div class="center-section">
+            <div class="back-btn">Menu</div>
+        </div>
+
+        <!-- Right: Icons + Green Button -->
+        <div class="right-section">
+            <div class="icon-btn" id="lang-btn">Languages
+                <div class="dropdown-menu" id="lang-dropdown">
+                    <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.jpg' %}" width="24" height="16">RU</a>
+                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
+                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16">EN</a>
+                </div>
+            </div>
+            <a href="#" class="icon-btn">Card</a>
+            <a href="#" class="icon-btn">Account</a>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'account' %}"><i>🔓</i> <span>Вход в кабинет</span></a></li>
+            <li><a href="{% url 'domain' %}"><i>🌐</i> <span>Заказать домен</span></a></li>
+            <li><a href="{% url 'host' %}"><i>💾</i> <span>Заказать хостинг</span></a></li>
+            <li><a href="{% url 'sertificat' %}"><i>🔒</i> <span>Заказать SSL</span></a></li>
+            <li><a href="{% url 'application' %}"><i>📝</i> <span>Написать заявление</span></a></li>
+        </ul>
+    </div>
+
+
+<script src="{% static 'assets/js/scripts.js' %}"></script> 
+</body>
+</html>

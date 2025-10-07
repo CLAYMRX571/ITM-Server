@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -47,16 +47,17 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 
     'apps.account',
-    'apps.cash',
+    'apps.application',
+    'apps.domain',
     'apps.home',
     'apps.host',
     'apps.payment',
     'apps.sertificat',
-    'apps.server',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,12 +137,12 @@ MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
 
 MODELTRANSLATION_TRANSLATION_FILES = (
     'apps.account.translations',
-    'apps.cash.translations',
+    'apps.application.translations',
+    'apps.domain.translations',
     'apps.home.translations',
     'apps.host.translations',
     'apps.payment.translations',
     'apps.sertificat.translations',
-    'apps.server.translations',
 )
 
 # Internationalization
@@ -287,13 +288,6 @@ JAZZMIN_SETTINGS = {
     "icons": {
         "auth.group": "fa fa-users",
         "auth.user": "fa fa-user",
-        "account.account": "fa fa-info",
-        "cash.cash": "fa fa-key",
-        "home.home": "fa fa-star",
-        "host.host": "fa fa-star",
-        "payment.payment": "fa fa-star",
-        "sertificat.sertificat": "fa fa-star",
-        "server.server": "fa fa-star",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
